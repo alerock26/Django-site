@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Posts {% endblock %}
+
+{% block main %}
+
+<h1>All Posts</h1>
+
+{% for i in posts %}
+<section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        {% if i.imagen %}
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{i.imagen.url}}" alt="">
+        {% endif %}
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">{{i.titulo}}</span>
+            <span class="section-heading-lower">{{i.contenido}}</span>
+          </h2>
+          Autor: {{i.autor}}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+
+<section>
+    <div style="color: white; margin:auto;">
+        Categorias: {% for i in categorias %}
+            {{i.nombre}}
+        {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}
