@@ -4,3 +4,6 @@ from django.shortcuts import render, HttpResponse
 
 def home_view(request):
     return render(request, 'core/home.html')
+
+def contact_view(request):
+    return render(request, 'core/contact_view.html')
