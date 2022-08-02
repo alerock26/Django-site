@@ -1,4 +1,4 @@
-#!/Users/alerock26/Documents/My_Projects/TiendaOnline/virt/bin/python3.9
+#!/home/alerock26/Django_Projects/Django-site/virt/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
