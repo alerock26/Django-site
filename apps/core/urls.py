@@ -9,7 +9,7 @@ urlpatterns = [
     path('', home_view, name='home_view' ),
     #path('servicios', servicios_view, name='servicios_view'),
 
-    path('contact', contact_view, name='contact_view'),
+    path('contact/', contact_view, name='contact_view'),
 ]
 
 # Agrega la URL de MEDIA files
