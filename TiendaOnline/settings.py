@@ -135,3 +135,11 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.ferozo.com'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'aamador@alternativemfg.com'
+RECIPIENT_ADDRESS=['alerock26@gmail.com']
+EMAIL_HOST_PASSWORD = 'S0p0rt3324'

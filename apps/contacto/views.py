@@ -17,3 +17,4 @@ def contact_view(request):
             return redirect('/contacto/?valid')
     elif request.method == 'GET':
         return render(request, 'contacto/contact_view.html', {'form':contact})
+
