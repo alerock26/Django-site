@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.blog',
     'apps.tienda',
     'apps.contacto',
+    'apps.cart',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # My context processor (especie de vaiable global)
+                'apps.cart.custom_context_processor.importe_total_carro'
             ],
         },
     },

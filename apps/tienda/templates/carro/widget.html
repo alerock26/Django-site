@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th colspan="3" class="text-center">Carro compras</th>
+        </tr>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if request.session.carro.items %}
+            {% for i in request.session.carro.items %}
+
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3"  class="alert alert-danger text-center"> No items </td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
