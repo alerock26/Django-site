@@ -16,8 +16,20 @@
 
 <body>
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-        <span class="site-heading-lower">Gestión de Pedidos</span>
+        <span class="site-heading-lower">DJANGO SITE</span>
     </h1>
+
+    <!-- User Login and Register zone -->
+    <div style="background-color:black; color:white">
+        {% if user.is_authenticated %}
+        <h5 style="text-align:right; margin-right:50px;"> Hello {{user.username}} </h5>
+        <a href="{% url 'apps.autenticacion:cerrar_sesion' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'apps.autenticacion:user_login' %}">Login</a> &nbsp; &nbsp; <a href="#">Register</a>
+        Unknown user 
+        {% endif %}
+    </div>
+
     {% include 'core/navbar.html' %}
     {% block main %}
 

@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %} Authentication page {% endblock %}
+
+{% block main %}
+
+<div style="width:25%; margin:auto;">
+    <h1 style="text-align:center; color:white">User Login Page </h1>
+
+    <form method="post" action="" style="color:white;">
+        {% csrf_token %}
+        
+        {{form|crispy}}
+
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+</div>
+{% endblock %}

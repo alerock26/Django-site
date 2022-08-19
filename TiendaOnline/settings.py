@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'apps.tienda',
     'apps.contacto',
     'apps.cart',
+    'apps.autenticacion',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'aamador@alternativemfg.com'
 RECIPIENT_ADDRESS=['alerock26@gmail.com']
 EMAIL_HOST_PASSWORD = 'S0p0rt3324'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

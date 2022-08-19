@@ -30,4 +30,8 @@ urlpatterns = [
     path('tienda/', include('apps.tienda.urls')),
 
     path('contacto/', include('apps.contacto.urls')),
+
+    path('carro/', include('apps.cart.urls')),
+
+    path('user/', include('apps.autenticacion.urls')),
 ]
